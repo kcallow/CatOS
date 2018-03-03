@@ -1,5 +1,5 @@
-![CatOS](https://github.com/kcallow/CatOS/raw/master/logo.png "CatOS Logo") 
 ![CatOS](https://github.com/kcallow/CatOS/raw/master/CatOS-marriage.png "CatOS, Marriage of iPhone with Android") 
+![CatOS](https://github.com/kcallow/CatOS/raw/master/logo.png "CatOS Logo") 
 # CatOS: _A Distributed Web App Ecosystem_
 
 CatOS = Unix + NodeJS + Browser-based shell
