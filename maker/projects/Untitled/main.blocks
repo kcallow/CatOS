@@ -1,0 +1,30 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="pxt-on-start" id="|38z`])@uZQ,6(gwc|la" x="0" y="0">
+    <statement name="HANDLER">
+      <block type="controls_repeat_ext" id="HUz[Gdcxz|H[0Ht=LRtk">
+        <value name="TIMES">
+          <shadow type="math_number" id="RTYUs^(KC8x]a/DiATXB">
+            <field name="NUM">4</field>
+          </shadow>
+        </value>
+        <statement name="DO">
+          <block type="devices_camera" id="Fzq`Uq@U#_3j|GSx33Mn">
+            <field name="property">MesCameraEvent.TakePhoto</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="device_forever" id="1v)U:U[HE82AQ09+4j4o" x="21" y="135">
+    <statement name="HANDLER">
+      <block type="device_print_message" id="@LqYa0Hp$`r6$?G2{Ny.">
+        <value name="text">
+          <shadow type="text" id="k1m9k]TbTOR=~G+f@b?%">
+            <field name="TEXT">Hello!</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>
