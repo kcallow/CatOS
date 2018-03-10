@@ -8,66 +8,53 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-div {
-   float: right;
-}
-.col-xs-3 {
-   float: right;
+img {
+   width: 100%;
+   border-radius: 50%;
 }
 .footer {
    position:fixed;
    left:0px;
-   bottom:0px;
    width:100%;
    background: white;
 }
+.col-xs-3 {
+   float: right;
+   max-width: 120px; 
+   margin-top: 8px;
+}
 .col-xs-4 {
    width:33%; margin-top: 25px;
+}
+@media screen and (min-width: 600px) {
+    .footer {
+        top:0px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .footer {
+        bottom:0px;
+    }
+    .title {
+        display: none;
+    }
 }
   </style>
 </head>
 <body>
 
 <div class="container-fluid">
-  <h1>🐱‍👓☸️🌌<br>CatNet</h1>
   <div class="row">
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
-	  <div class="col-xs-4" ><img width=100% src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
+	  <div class="col-xs-4" ><img src="https://media.gettyimages.com/vectors/vector-icon-of-great-dane-dog-face-on-red-square-vector-id504581261"/></div>
   </div>
 </div>
 <div class="footer container-fluid">
   <div class="row">
-    <div class="col-xs-3" style="width:25%; max-width: 120px; margin-top: 8px;"><img width=100% src="https://png.icons8.com/metro/1600/integrated-webcam.png"/></div>
-    <div class="col-xs-3" style="width:25%; max-width: 120px; margin-top: 8px;"><img width=100% src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-squares-01/3/72-512.png"/></div>
-    <div class="col-xs-3" style="width:25%; max-width: 120px; margin-top: 8px;"><img width=100% src="https://cdn.vectorstock.com/i/thumb-large/78/87/headset-icon-vector-2947887.jpg"/></div>
-    <div class="col-xs-3" style="width:25%; max-width: 120px; margin-top: 8px;"><img width=100% src="https://img3.stockfresh.com/files/a/anna_leni/m/61/5391514_stock-vector-game-console-flat-app-icon-with-long-shadow.jpg"/></div>
+    <div class="col-xs-3"><img src="photo.png"/></div>
+    <div class="col-xs-3"><img src="video.png"/></div>
+    <div class="col-xs-3"><img src="music.jpg"/></div>
+    <div class="col-xs-3"><img src="game.jpg"/></div>
+  <div class="title"><h1>🐱‍👓☸️🌌<br>CatNet</h1></div>
   </div>
 </div>
 </body>
