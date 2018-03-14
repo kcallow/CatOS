@@ -8,6 +8,11 @@
 <body>
   <pre id="display"></pre>
   <script src="pouchdb.min.js"></script>
-  <script src="db.js"></script>
+  <script>
+	var db = new PouchDB('sample');
+	db.info().then(function (info) {
+	  document.getElementById('display').innerHTML = 'We have a database: ' + JSON.stringify(info);
+	});
+  </script>
 </body>
 </html>
