@@ -14,47 +14,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://unpkg.com/ipfs/dist/index.min.js"></script>
-  <script src="http://catos.co/bower_components/yjs/y.js"></script>
-  <script src="http://catos.co/keys/vk_loader.js?vk_layout=CN%20Chinese%20Cangjie&vk_skin=winxp" ></script>
-  <script>
-        Y({
-          db: {
-            // name: 'memory' // use memory database adapter.
-            name: 'indexeddb' // use indexeddb database adapter instead for offline apps
-          },
-          connector: {
-            name: 'webrtc', // use webrtc connector
-            // name: 'websockets-client'
-            // name: 'xmpp'
-            room: 'my-room' // clients connecting to the same room share data 
-          },
-          sourceDir: '/bower_components', // location of the y-* modules (browser only)
-          share: {
-            textarea: 'Text' // y.share.textarea is of type y-text
-          }
-        }).then(function (y) {
-          // The Yjs instance `y` is available
-          // y.share.* contains the shared types
-
-          // Bind `y.share.textarea` to `<textarea/>`
-          y.share.textarea.bind(document.querySelector('textarea'))
-        })
-  </script>
-  <script >
-    const node = new Ipfs({ repo: 'ipfs-' + Math.random() })
-
-    node.once('ready', () => {
-      console.log('Online status: ', node.isOnline() ? 'online' : 'offline')
-
-
-      document.getElementById("status").innerHTML= (node.isOnline() ? '💡' : '📴')
-      // You can write more code here to use it. Use methods like 
-      // node.files.add, node.files.get. See the API docs here:
-      // https://github.com/ipfs/interface-ipfs-core
-    })
-
-  </script>
   <style>
 i {
    font-size: 10px;
@@ -120,17 +79,6 @@ visibility:hidden;
 <input type="file" id="files" name="files[]" multiple />
 <output id="list"></output>
 <script>
-  function addFile(file){
-	node.files.add(new node.types.Buffer(file), (err, filesAdded) => {
-		if (err) {
-			return console.error('Error - ipfs files add', err, res)
-		}
-
-		filesAdded.forEach((file) => console.log('successfully stored', file.hash))
-    })
-  }
-
-
   function handleFileSelect(evt) {
     var files = evt.target.files; // FileList object
 
@@ -147,7 +95,7 @@ visibility:hidden;
       // Closure to capture the file information.
       reader.onload = (function(theFile) {
         return function(e) {
-          addFile(e.target.result);
+  //        addFile(e.target.result);
           // Render thumbnail.
           var span = document.createElement('span');
           span.innerHTML = ['<img class="col-xs-4" src="', e.target.result,
@@ -163,36 +111,6 @@ visibility:hidden;
 
   document.getElementById('files').addEventListener('change', handleFileSelect, false);
 </script>
-
-  <!--h1>IPFS in the Browser</h1>
-  <p>This page creates an IPFS node in your browser and drops it into the global Javascript namespace as <b><em style="background-color:#d7d6d6">node</em></b>. Open the console to play around with it.</p>
-  <p>Note that opening two tabs of this page in the same browser won't work well, because they will share node configuration. You'll end up trying to run two instances of the same node, with the same private key and identity, which is a Bad Idea.</p>
-
-  <h2>Some suggestions</h2>
-
-  <p>Try adding a new file:</p>
-
-  <code style="display:block; white-space:pre-wrap; background-color:#d7d6d6">
-    node.files.add(Buffer.from(f), (err, filesAdded) => {
-      if (err) {
-        return console.error('Error - ipfs files add', err, res)
-      }
-
-      filesAdded.forEach((file) => console.log('successfully stored', file.hash))
-    })
-  </code>
-
-  <p>You can cat that same file. If you used the exact same string as above ('Hello world!') you should have an hash like this: 'QmQzCQn4puG4qu8PVysxZmscmQ5vT1ZXpqo7f58Uh9QfyY'</p>
-
-  <code style="display:block; white-space:pre-wrap; background-color:#d7d6d6">
-    node.files.cat('QmQzCQn4puG4qu8PVysxZmscmQ5vT1ZXpqo7f58Uh9QfyY', function (err, data) {
-      if (err) {
-        return console.error('Error - ipfs files cat', err, res)
-      }
-
-      console.log(data.toString())
-    })
-  </code-->
   
 <div class="footer container-fluid">
 
@@ -205,9 +123,5 @@ visibility:hidden;
   </div>
 
 </div>
-<br><h1><b id="status">📴 </b></h1><br>
-<textarea name="db" id="db" type="textarea" style="width:100%; font-size: 150%" wrap="soft" onfocus="VirtualKeyboard.attachInput(this)"></textarea>
-<div align="center" id="td"></div>
-<div align="center"><input id="showkb" type="button" value="#️⃣" onclick="VirtualKeyboard.toggle('db','td'); return false;" /></div>
 </body>
 </html>
