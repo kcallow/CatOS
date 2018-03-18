@@ -16,6 +16,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/ipfs/dist/index.min.js"></script>
   <script src="http://catos.co/bower_components/yjs/y.js"></script>
+  <script src="http://catos.co/keys/vk_loader.js?vk_layout=CN%20Chinese%20Cangjie&vk_skin=winxp" ></script>
   <script>
         Y({
           db: {
@@ -40,7 +41,7 @@
           y.share.textarea.bind(document.querySelector('textarea'))
         })
   </script>
-  <script type="text/javascript">
+  <script >
     const node = new Ipfs({ repo: 'ipfs-' + Math.random() })
 
     node.once('ready', () => {
@@ -103,6 +104,15 @@ h1 {
 input{
 visibility:hidden;
 }
+
+#showkb {
+	visibility:visible;
+        font-size:35px;
+        background: none;
+        border: none;
+        width: 100%;
+}
+
   </style>
 </head>
 </head>
@@ -196,6 +206,8 @@ visibility:hidden;
 
 </div>
 <br><h1><b id="status">📴 </b></h1><br>
-<textarea id="db"></textarea>
+<textarea name="db" id="db" type="textarea" style="width:100%; font-size: 150%" wrap="soft" onfocus="VirtualKeyboard.attachInput(this)"></textarea>
+<div align="center" id="td"></div>
+<div align="center"><input id="showkb" type="button" value="#️⃣" onclick="VirtualKeyboard.toggle('db','td'); return false;" /></div>
 </body>
 </html>
