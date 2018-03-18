@@ -15,6 +15,31 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/ipfs/dist/index.min.js"></script>
+  <script src="http://catos.co/net/bower_components/yjs/y.js"></script>
+  <script>
+        Y({
+          db: {
+            // name: 'memory' // use memory database adapter.
+            name: 'indexeddb' // use indexeddb database adapter instead for offline apps
+          },
+          connector: {
+            name: 'webrtc', // use webrtc connector
+            // name: 'websockets-client'
+            // name: 'xmpp'
+            room: 'my-room' // clients connecting to the same room share data 
+          },
+          sourceDir: '/bower_components', // location of the y-* modules (browser only)
+          share: {
+            textarea: 'Text' // y.share.textarea is of type y-text
+          }
+        }).then(function (y) {
+          // The Yjs instance `y` is available
+          // y.share.* contains the shared types
+
+          // Bind `y.share.textarea` to `<textarea/>`
+          y.share.textarea.bind(document.querySelector('textarea'))
+        })
+  </script>
   <script type="text/javascript">
     const node = new Ipfs({ repo: 'ipfs-' + Math.random() })
 
@@ -84,7 +109,6 @@ visibility:hidden;
 <body>
 <input type="file" id="files" name="files[]" multiple />
 <output id="list"></output>
-
 <script>
   function addFile(file){
 	node.files.add(new node.types.Buffer(file), (err, filesAdded) => {
@@ -172,5 +196,6 @@ visibility:hidden;
 
 </div>
 <br><h1><b id="status">📴 </b></h1><br>
+<textarea></textarea>
 </body>
 </html>
