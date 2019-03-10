@@ -1,16 +1,12 @@
 ![CatOS](https://github.com/kcallow/CatOS/raw/master/CatOS-marriage.png "CatOS, Marriage of iPhone with Android") 
 ![CatOS](https://github.com/kcallow/CatOS/raw/master/logo.png "CatOS Logo") 
-# CatOS: _There's only one thing we gotta change: everything._
+# CatOS: _A Marriage Of Systems_
 
-UNIX is good. UNIX is everywhere. But trash software eats away at out machines. 
-Google tells you what to think. Facebook owns your every move. The industry sells good hardware meant to be trashed in 2 years.
+Mobile devices are one of the greatest inventions of Man. With a computing power beyond our comprehension, great ease of use, and global, instant interconnectivity, they have and will continue to change our world.
 
-This has gotta stop.
+But these devices come at no small cost to society. Our limited natural resources are extracted, shaped, and refined by the hard work of countless men, women, and machines to materialize our cleverest inventions, and then distributed to every corner of the Earth, in a concerted operation requiring the greatest organization, technology, investment, and care.
 
-By 80s logic, everyone has pocket supercomputers.
-We don't need your Death Star cloud. But it's futile to blow it up. You'd just build a new one.
-All we need is a new OS. An OS for your phone, your PC, and for your mind.
-Let the supercomputers supercompute. Both the ones in your pockets and the ones in your heads.
+It is a great shame for this effort to go to waste. The technology we love becomes trash too often. Devices that still have life in them are replaced by the new, either by desire or by obsolescence, and that which is still potentially useful is illogically discarded. It is my goal and dream to evade this, not by reinventing the wheel, but by making the old compatible with the new. How? By making old, superb quality iOS devices run the newest Android apps.
 
 Thank you for your interest in my new project!
 -kc
