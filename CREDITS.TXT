@@ -1,0 +1,6 @@
+Special thanks to:
+-LADSoft (CC386, infopad)
+-litchie (dospad)
+-Chris and John Downey (xvi)
+-FreeDOS Edit
+-DOSBox devs
