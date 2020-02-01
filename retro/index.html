@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="js-dos.js">
+	</script>
+	<meta charset="utf-8">
+	<title>CatOS</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="http://catos.co/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+	<link href="http://catos.co/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+	<link href="http://catos.co/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+	<link href="http://catos.co/site.webmanifest" rel="manifest">
+	<link href="http://catos.co/safari-pinned-tab.svg" rel="mask-icon">
+	<style>
+	   canvas {
+	     width: 800px;
+	     height: 480px;
+	   }
+	   body {
+	     background: black;
+	     color: white;
+	   }
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th width="66%">
+				<canvas id="jsdos"></canvas>
+				<script>
+				Dos(document.getElementById("jsdos")).ready((fs, main) => {
+				  fs.extract("catos.zip").then(() => {
+				    main(["-c", "LSETENV.BAT"])
+				  });
+				});
+				</script>
+			</th>
+			<th width="30%">
+				<img src="hashbang2.png">
+				<h1>Hacking!</h1>
+				<h2>H.C</h2>
+				<pre>
+#include &lt;stdio.h&gt;
+
+int main(void) {
+	printf("Hello");
+	return 0;
+}
+
+				</pre>
+				<img src="hello.gif" width="100%">
+			</th>
+		</tr>
+	</table>
+</body>
+</html>
